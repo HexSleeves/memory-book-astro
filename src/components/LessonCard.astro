@@ -1,0 +1,72 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+
+interface Props {
+  lesson: CollectionEntry<"lessons">;
+  index: number;
+}
+
+const { lesson, index } = Astro.props;
+const { title, accent } = lesson.data;
+const { Content } = await render(lesson);
+const number = String(index + 1).padStart(2, "0");
+const delay = `${index * 80}ms`;
+---
+
+<article
+  class="lesson"
+  data-accent={accent}
+  data-reveal
+  style={`--reveal-delay:${delay}`}
+  aria-labelledby={`lesson-${number}-title`}
+>
+  <span class="ord" aria-hidden="true">No. {number}</span>
+  <h3 id={`lesson-${number}-title`} class="title">{title}</h3>
+  <div class="body prose">
+    <Content />
+  </div>
+</article>
+
+<style>
+  .lesson {
+    --accent: var(--tape-yellow);
+    background: var(--paper-warm);
+    padding: var(--space-8) var(--space-6);
+    border-radius: 4px;
+    box-shadow:
+      0 1px 0 var(--paper-shadow),
+      0 8px 22px rgba(43, 33, 24, 0.08);
+    border-left: 4px solid var(--accent);
+    position: relative;
+  }
+  .lesson[data-accent="yellow"] { --accent: var(--tape-yellow); }
+  .lesson[data-accent="rose"] { --accent: var(--tape-rose); }
+  .lesson[data-accent="blue"] { --accent: var(--tape-blue); }
+  .lesson[data-accent="sage"] { --accent: var(--doodle-sage); }
+
+  .ord {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+  }
+  .title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    line-height: var(--leading-tight);
+    color: var(--ink-deep);
+    margin: var(--space-2) 0 var(--space-4);
+  }
+  .body {
+    font-size: var(--text-base);
+    color: var(--ink-deep);
+    max-width: none;
+  }
+
+  @media (min-width: 40rem) {
+    .lesson { padding: var(--space-12) var(--space-8); }
+    .title { font-size: var(--text-2xl); }
+  }
+</style>

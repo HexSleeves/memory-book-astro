@@ -1,0 +1,74 @@
+---
+import { getCollection } from "astro:content";
+import CassetteCard from "./islands/CassetteCard";
+import "./islands/CassetteCard.css";
+
+const voices = (await getCollection("voices")).sort((a, b) => a.data.order - b.data.order);
+
+const tapes = voices.map((v, i) => ({
+  entry: v,
+  align: i % 2 === 0 ? ("left" as const) : ("right" as const),
+}));
+---
+
+<section id="voices" class="voices" aria-labelledby="voices-title">
+  <div class="container">
+    <header class="header" data-reveal>
+      <p class="kicker">Section four</p>
+      <h2 id="voices-title" class="title">Voice messages</h2>
+      <p class="subtitle">Tap a tape to play. Transcripts are always available.</p>
+    </header>
+
+    {
+      tapes.map(({ entry, align }) => (
+        <div class="voice-host" data-reveal={align === "left" ? "slide-right" : "slide-left"}>
+          <CassetteCard
+            client:visible
+            title={entry.data.title}
+            audio={entry.data.audio}
+            duration={entry.data.duration}
+            side={entry.data.side}
+            recordedOn={entry.data.recordedOn}
+            align={align}
+            transcript={entry.body ?? ""}
+          />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .voices {
+    padding-block: var(--space-16);
+  }
+  .header {
+    text-align: center;
+    max-width: 36rem;
+    margin: 0 auto var(--space-12);
+  }
+  .kicker {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.78rem;
+    color: var(--ink-faded);
+    margin: 0 0 var(--space-3);
+  }
+  .title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--text-2xl);
+    color: var(--ink-deep);
+    margin: 0 0 var(--space-3);
+  }
+  .subtitle {
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  @media (min-width: 40rem) {
+    .voices { padding-block: var(--space-24); }
+    .title { font-size: var(--text-3xl); }
+  }
+</style>

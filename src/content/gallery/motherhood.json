@@ -1,0 +1,28 @@
+{
+  "label": "You being a mother",
+  "chapter": "motherhood",
+  "order": 2,
+  "photos": [
+    {
+      "src": "../../assets/gallery/motherhood/01.svg",
+      "caption": "Carrying me before I could carry anything",
+      "year": "1985",
+      "tape": "yellow",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/02.svg",
+      "caption": "Reading at the kitchen table after midnight",
+      "year": "1992",
+      "tape": "rose",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/03.svg",
+      "caption": "Walking us to the bus stop one last time",
+      "year": "1998",
+      "tape": "blue",
+      "tilt": 0
+    }
+  ]
+}

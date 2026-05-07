@@ -1,0 +1,71 @@
+---
+import { getEntry, render } from "astro:content";
+import SignatureReveal from "./islands/SignatureReveal";
+import "./islands/SignatureReveal.css";
+
+const letter = await getEntry("letter", "letter");
+if (!letter) throw new Error("Missing closing letter content");
+
+const { closing } = letter.data;
+const { Content } = await render(letter);
+---
+
+<section id="letter" class="letter" aria-labelledby="letter-title">
+  <div class="container">
+    <header class="header" data-reveal>
+      <p class="kicker">Closing</p>
+      <h2 id="letter-title" class="title">A letter to you</h2>
+    </header>
+
+    <article class="letter-body prose" data-reveal>
+      <Content />
+    </article>
+
+    <SignatureReveal client:visible closing={closing} />
+  </div>
+</section>
+
+<style>
+  .letter {
+    padding-block: var(--space-16) var(--space-32);
+  }
+
+  .header {
+    text-align: center;
+    max-width: 36rem;
+    margin: 0 auto var(--space-12);
+  }
+
+  .kicker {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.78rem;
+    color: var(--ink-faded);
+    margin: 0 0 var(--space-3);
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--text-2xl);
+    color: var(--ink-deep);
+    margin: 0;
+  }
+
+  .letter-body {
+    max-width: var(--measure);
+    margin-inline: auto;
+    font-size: var(--text-lg);
+    line-height: 1.75;
+  }
+
+  .letter-body :global(p) {
+    margin-block: 0 var(--space-6);
+  }
+
+  @media (min-width: 40rem) {
+    .letter { padding-block: var(--space-24) var(--space-32); }
+    .title { font-size: var(--text-3xl); }
+  }
+</style>

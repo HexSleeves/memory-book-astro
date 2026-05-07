@@ -1,0 +1,28 @@
+{
+  "label": "When we were small",
+  "chapter": "childhood",
+  "order": 1,
+  "photos": [
+    {
+      "src": "../../assets/gallery/childhood/01.svg",
+      "caption": "First day, hand on the door",
+      "year": "1987",
+      "tape": "yellow",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/childhood/02.svg",
+      "caption": "Birthday cake with the bad icing",
+      "year": "1989",
+      "tape": "rose",
+      "tilt": 1.5
+    },
+    {
+      "src": "../../assets/gallery/childhood/03.svg",
+      "caption": "Front porch summer",
+      "year": "1991",
+      "tape": "blue",
+      "tilt": -1
+    }
+  ]
+}

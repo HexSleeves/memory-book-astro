@@ -1,0 +1,38 @@
+.sig {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--paper-shadow);
+  max-width: var(--measure);
+}
+
+.sig-closing {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.sig-glyph {
+  width: 100%;
+  max-width: 26rem;
+  color: var(--ink-deep);
+}
+
+.sig-glyph svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.sig-glyph svg path {
+  fill: none;
+  stroke: currentColor;
+}
+
+@media (min-width: 64rem) {
+  .sig-glyph { max-width: 32rem; }
+}

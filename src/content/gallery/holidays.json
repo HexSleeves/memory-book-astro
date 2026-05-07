@@ -1,0 +1,28 @@
+{
+  "label": "Holidays",
+  "chapter": "holidays",
+  "order": 3,
+  "photos": [
+    {
+      "src": "../../assets/gallery/holidays/01.svg",
+      "caption": "Christmas, before anyone could sit still",
+      "year": "1992",
+      "tape": "yellow",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/holidays/02.svg",
+      "caption": "Thanksgiving, the one with the smoke alarm",
+      "year": "1996",
+      "tape": "rose",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/holidays/03.svg",
+      "caption": "New Year, our hands the same shape",
+      "year": "2003",
+      "tape": "blue",
+      "tilt": -1
+    }
+  ]
+}

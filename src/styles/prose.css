@@ -1,0 +1,28 @@
+.prose {
+  max-width: var(--measure);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--ink-deep);
+}
+
+.prose p {
+  margin: 0 0 var(--space-4);
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose em {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.prose strong {
+  font-weight: 500;
+}
+
+.prose a {
+  color: var(--doodle-rust);
+}

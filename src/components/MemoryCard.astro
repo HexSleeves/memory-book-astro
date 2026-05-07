@@ -1,0 +1,92 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+interface Props {
+  memory: CollectionEntry<"memories">;
+  index: number;
+}
+
+const { memory, index } = Astro.props;
+const { title, photo, photoCaption, layout } = memory.data;
+const { Content } = await render(memory);
+const tilt = (index % 2 === 0 ? -2 : 2) + (Math.random() - 0.5);
+const tape = ["yellow", "rose", "blue"][index % 3] as "yellow" | "rose" | "blue";
+const delay = `${index * 90}ms`;
+---
+
+<article
+  class="memory"
+  data-layout={layout}
+  data-reveal
+  style={`--reveal-delay:${delay}`}
+  aria-labelledby={`memory-${index}-title`}
+>
+  <figure class="photo polaroid taped" data-tape={tape} style={`--polaroid-tilt:${tilt}deg`}>
+    <Image
+      src={photo}
+      alt={photoCaption}
+      widths={[360, 600, 900]}
+      sizes="(max-width: 640px) 80vw, 360px"
+    />
+    <figcaption>{photoCaption}</figcaption>
+  </figure>
+  <div class="text">
+    <h3 id={`memory-${index}-title`} class="title">{title}</h3>
+    <div class="body prose">
+      <Content />
+    </div>
+  </div>
+</article>
+
+<style>
+  .memory {
+    display: grid;
+    gap: var(--space-8);
+    align-items: center;
+    margin-block: var(--space-16);
+  }
+
+  .photo {
+    margin: 0;
+    justify-self: center;
+    max-width: 18rem;
+  }
+  .photo :global(img) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--text-xl);
+    line-height: var(--leading-tight);
+    color: var(--ink-deep);
+    margin: 0 0 var(--space-4);
+  }
+
+  .body {
+    color: var(--ink-deep);
+  }
+
+  @media (min-width: 64rem) {
+    .memory {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+    }
+    .memory[data-layout="right"] .photo { order: 2; }
+    .memory[data-layout="full"] {
+      grid-template-columns: 1fr;
+      max-width: 56rem;
+      margin-inline: auto;
+    }
+    .memory[data-layout="full"] .photo {
+      max-width: 36rem;
+      justify-self: center;
+    }
+    .title { font-size: var(--text-2xl); }
+  }
+</style>

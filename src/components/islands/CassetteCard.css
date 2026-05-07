@@ -1,0 +1,192 @@
+.cassette {
+  display: grid;
+  gap: var(--space-4);
+  margin-block: var(--space-8);
+}
+
+.cassette-shell {
+  background: linear-gradient(180deg, #322a23, var(--cassette-shell));
+  color: var(--cassette-label);
+  padding: var(--space-6) var(--space-6) var(--space-4);
+  border-radius: 6px;
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 12px 32px rgba(0, 0, 0, 0.18);
+  max-width: 38rem;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.cassette-label {
+  background: var(--cassette-label);
+  color: var(--ink-deep);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 2px;
+  display: grid;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+}
+
+.cassette-side {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+
+.cassette-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-xl);
+  line-height: 1.1;
+  margin: 0;
+  color: var(--ink-deep);
+}
+
+.cassette-recorded {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+
+.cassette-reels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--space-2) var(--space-8);
+  height: 88px;
+}
+
+.reel {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #1a1612 38%, var(--reel-amber) 38.5%, #b07a30 70%, #1a1612 71%);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.reel::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #1a1612;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid var(--cassette-label);
+}
+
+.reel-spokes {
+  position: absolute;
+  inset: 0;
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 22deg,
+      rgba(0, 0, 0, 0.3) 22deg,
+      rgba(0, 0, 0, 0.3) 23deg,
+      transparent 23deg
+    );
+  border-radius: 50%;
+}
+
+.cassette-window {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
+  padding: var(--space-3);
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 36px;
+}
+
+.bar {
+  flex: 1;
+  height: var(--h, 50%);
+  background: rgba(235, 216, 181, 0.35);
+  border-radius: 1px;
+  transition: background var(--motion-quick) var(--ease-paper);
+}
+.bar.playing {
+  background: var(--reel-amber);
+}
+
+.cassette-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-2);
+}
+
+.play-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: var(--reel-amber);
+  color: var(--ink-deep);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  display: grid;
+  place-items: center;
+  transition: transform var(--motion-quick) var(--ease-paper);
+}
+.play-btn:hover:not(:disabled) {
+  transform: scale(1.06);
+}
+.play-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.transcript-btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cassette-label);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgba(235, 216, 181, 0.4);
+  border-radius: 2px;
+}
+
+.cassette-transcript {
+  background: var(--paper-warm);
+  padding: var(--space-6);
+  border-radius: 4px;
+  max-width: 38rem;
+  margin-inline: auto;
+  width: 100%;
+  font-style: italic;
+  color: var(--ink-deep);
+  box-shadow: 0 6px 18px rgba(43, 33, 24, 0.06);
+}
+
+.cassette-error {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--doodle-rust);
+}
+
+@media (min-width: 64rem) {
+  .cassette {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+  .cassette-shell { max-width: none; }
+  .cassette-transcript { max-width: none; margin: 0; }
+  .align-right .cassette-shell { order: 2; }
+}

@@ -1,0 +1,116 @@
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 33, 24, 0.86);
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+  z-index: 100;
+  animation: lb-fade var(--motion-base) var(--ease-paper);
+}
+
+@keyframes lb-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lb-frame {
+  position: relative;
+  width: min(96vw, 1100px);
+  max-height: 92vh;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.lb-figure {
+  margin: 0;
+  background: #fbf6eb;
+  padding: var(--space-3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: grid;
+  gap: var(--space-3);
+  max-height: 88vh;
+  overflow: hidden;
+}
+
+.lb-figure img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.lb-figure figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: center;
+  padding-block: var(--space-2);
+}
+
+.lb-caption {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--ink-soft);
+  line-height: 1.2;
+}
+
+.lb-meta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+
+.lb-close,
+.lb-nav {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: rgba(244, 236, 220, 0.92);
+  color: var(--ink-deep);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform var(--motion-quick) var(--ease-paper);
+}
+.lb-close:hover,
+.lb-nav:hover:not(:disabled) {
+  transform: scale(1.06);
+}
+.lb-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.lb-close {
+  position: absolute;
+  top: -3.5rem;
+  right: 0;
+}
+
+@media (max-width: 40rem) {
+  .lb-frame {
+    grid-template-columns: 1fr;
+  }
+  .lb-nav {
+    position: fixed;
+    bottom: var(--space-6);
+    z-index: 110;
+  }
+  .lb-prev { left: var(--space-6); }
+  .lb-next { right: var(--space-6); }
+  .lb-close {
+    top: var(--space-4);
+    right: var(--space-4);
+    position: fixed;
+  }
+}

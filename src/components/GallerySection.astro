@@ -1,0 +1,100 @@
+---
+import { getCollection } from "astro:content";
+import { getImage } from "astro:assets";
+import FilmStrip, { type StripPhoto } from "./islands/FilmStrip";
+import Lightbox from "./islands/Lightbox";
+import "./islands/FilmStrip.css";
+import "./islands/Lightbox.css";
+
+const chapters = (await getCollection("gallery")).sort((a, b) => a.data.order - b.data.order);
+
+const buildStrip = async (photos: typeof chapters[number]["data"]["photos"]): Promise<StripPhoto[]> => {
+  return Promise.all(
+    photos.map(async (p) => {
+      const widths = [360, 600, 900];
+      const variants = await Promise.all(
+        widths.map((w) => getImage({ src: p.src, width: w, format: "webp" })),
+      );
+      const fallback = variants[1] ?? variants[0];
+      const srcset = variants
+        .map((v, i) => `${v.src} ${widths[i]}w`)
+        .join(", ");
+      return {
+        srcset,
+        src: fallback.src,
+        width: fallback.attributes.width as number,
+        height: fallback.attributes.height as number,
+        caption: p.caption,
+        year: p.year,
+        tape: p.tape,
+        tilt: p.tilt,
+      };
+    }),
+  );
+};
+
+const strips = await Promise.all(
+  chapters.map(async (entry) => ({
+    label: entry.data.label,
+    chapter: entry.data.chapter,
+    photos: await buildStrip(entry.data.photos),
+  })),
+);
+---
+
+<section id="gallery" class="gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    <header class="header" data-reveal>
+      <p class="kicker">Section three</p>
+      <h2 id="gallery-title" class="title">Photographs</h2>
+      <p class="subtitle">Chapters of you. Drag, swipe, or tap a polaroid to open it.</p>
+    </header>
+  </div>
+  {
+    strips.map((s) => (
+      <div class="strip-host" data-reveal="slide-left">
+        <FilmStrip client:visible label={s.label} chapter={s.chapter} photos={s.photos} />
+      </div>
+    ))
+  }
+  <Lightbox client:idle />
+</section>
+
+<style>
+  .gallery {
+    padding-block: var(--space-16);
+  }
+  .header {
+    text-align: center;
+    max-width: 36rem;
+    margin: 0 auto var(--space-8);
+  }
+  .kicker {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.78rem;
+    color: var(--ink-faded);
+    margin: 0 0 var(--space-3);
+  }
+  .title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--text-2xl);
+    color: var(--ink-deep);
+    margin: 0 0 var(--space-3);
+  }
+  .subtitle {
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .strip-host {
+    overflow-x: hidden;
+  }
+  @media (min-width: 40rem) {
+    .gallery { padding-block: var(--space-24); }
+    .title { font-size: var(--text-3xl); }
+  }
+</style>

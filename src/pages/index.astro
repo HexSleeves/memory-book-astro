@@ -1,0 +1,27 @@
+---
+import BookLayout from "../components/BookLayout.astro";
+import Cover from "../components/Cover.astro";
+import Divider from "../components/Divider.astro";
+import LessonsSection from "../components/LessonsSection.astro";
+import MemoriesSection from "../components/MemoriesSection.astro";
+import GallerySection from "../components/GallerySection.astro";
+import VoiceSection from "../components/VoiceSection.astro";
+import LetterSection from "../components/LetterSection.astro";
+---
+
+<BookLayout
+  title="For Mom, A Memory Book"
+  description="A scrapbook of memories, lessons, photos, and voice notes for the woman who taught us how."
+>
+  <Cover />
+  <Divider variant="tape" />
+  <LessonsSection />
+  <Divider variant="doodle" />
+  <MemoriesSection />
+  <Divider variant="tape" />
+  <GallerySection />
+  <Divider variant="stars" />
+  <VoiceSection />
+  <Divider variant="doodle" />
+  <LetterSection />
+</BookLayout>

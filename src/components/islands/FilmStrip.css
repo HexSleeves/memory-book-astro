@@ -1,0 +1,117 @@
+.strip-wrap {
+  margin-block: var(--space-12);
+}
+
+.strip-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-inline: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.strip-label {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  color: var(--ink-deep);
+  margin: 0;
+  transform: rotate(-1.5deg);
+}
+
+.strip-controls {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.strip-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink-faded);
+  background: var(--paper-warm);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  display: grid;
+  place-items: center;
+  transition: transform var(--motion-quick) var(--ease-paper);
+}
+.strip-btn:hover:not(:disabled) {
+  transform: scale(1.06);
+}
+.strip-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.strip-viewport {
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.strip-viewport:active {
+  cursor: grabbing;
+}
+
+.strip-track {
+  display: flex;
+  gap: var(--space-8);
+  padding: var(--space-6) var(--space-4) var(--space-8);
+  width: max-content;
+  user-select: none;
+}
+
+.strip-photo {
+  background: #fbf6eb;
+  padding: var(--space-3) var(--space-3) var(--space-12);
+  flex: 0 0 auto;
+  width: 14rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform var(--motion-quick) var(--ease-paper);
+}
+.strip-photo:hover {
+  transform: rotate(0) translateY(-4px);
+}
+.strip-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+  filter: saturate(0.92) sepia(0.06) contrast(1.02);
+}
+.strip-photo figcaption {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--ink-soft);
+  margin-top: var(--space-3);
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.strip-photo .year {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+}
+
+@media (min-width: 40rem) {
+  .strip-photo { width: 16rem; }
+  .strip-label { font-size: var(--text-2xl); }
+}
+
+@media (min-width: 64rem) {
+  .strip-photo { width: 18rem; }
+  .strip-track { gap: var(--space-12); padding-inline: var(--space-8); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strip-photo:hover { transform: rotate(var(--polaroid-tilt, 0deg)); }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#88A287" />
+  <circle cx="180" cy="200" r="60" fill="#C56B4A" opacity="0.7" />
+  <circle cx="600" cy="160" r="40" fill="#F2D17C" opacity="0.85" />
+  <circle cx="450" cy="380" r="80" fill="#E5A5A0" opacity="0.7" />
+  <rect y="450" width="800" height="150" fill="#5C4A3A" opacity="0.55" />
+  <text x="50%" y="55%" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#2B2118" opacity="0.4">memory · garden</text>
+</svg>

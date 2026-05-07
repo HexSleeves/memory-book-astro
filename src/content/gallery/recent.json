@@ -1,0 +1,28 @@
+{
+  "label": "Lately",
+  "chapter": "recent",
+  "order": 4,
+  "photos": [
+    {
+      "src": "../../assets/gallery/recent/01.svg",
+      "caption": "On the porch, same chair, same smile",
+      "year": "2023",
+      "tape": "yellow",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/recent/02.svg",
+      "caption": "Garden in late summer, victorious",
+      "year": "2024",
+      "tape": "rose",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/recent/03.svg",
+      "caption": "Coffee. The exact same mug since 2001.",
+      "year": "2025",
+      "tape": "blue",
+      "tilt": 0
+    }
+  ]
+}

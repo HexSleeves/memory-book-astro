@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#C56B4A" />
+  <ellipse cx="400" cy="380" rx="320" ry="80" fill="#EFE3CC" />
+  <circle cx="280" cy="370" r="40" fill="#F2D17C" />
+  <circle cx="400" cy="360" r="55" fill="#8B5A2B" />
+  <circle cx="520" cy="370" r="40" fill="#88A287" />
+  <text x="50%" y="50%" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#F4ECDC" opacity="0.55">memory · thanksgiving</text>
+</svg>
