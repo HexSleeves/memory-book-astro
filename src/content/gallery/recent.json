@@ -1,28 +1,84 @@
 {
   "label": "Lately",
   "chapter": "recent",
-  "order": 4,
+  "order": 6,
   "photos": [
     {
-      "src": "../../assets/gallery/recent/01.svg",
-      "caption": "On the porch, same chair, same smile",
-      "year": "2023",
+      "src": "../../assets/gallery/recent/2019-kitchen-mask.jpg",
+      "caption": "Kitchen disguise and a proud hug",
+      "year": "2026",
+      "tape": "yellow",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/recent/2025-dance-class.jpg",
+      "caption": "Tiny dancers, big encouragement",
+      "year": "2025",
+      "tape": "rose",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/recent/2025-park-hug.jpg",
+      "caption": "Park day with the littles",
+      "year": "2025",
+      "tape": "blue",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/recent/2024-couch-nap.jpg",
+      "caption": "The safest place to fall asleep",
+      "year": "2024",
       "tape": "yellow",
       "tilt": 1
     },
     {
-      "src": "../../assets/gallery/recent/02.svg",
-      "caption": "Garden in late summer, victorious",
-      "year": "2024",
+      "src": "../../assets/gallery/recent/2023-kitchen-with-littles.jpg",
+      "caption": "Arms full, heart fuller",
+      "year": "2023",
       "tape": "rose",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/recent/2022-field-snuggle.jpg",
+      "caption": "Wrapped up outside",
+      "year": "2022",
+      "tape": "blue",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/recent/2021-babies-in-the-yard.jpg",
+      "caption": "All the little hands at once",
+      "year": "2021",
+      "tape": "yellow",
       "tilt": -2
     },
     {
-      "src": "../../assets/gallery/recent/03.svg",
-      "caption": "Coffee. The exact same mug since 2001.",
-      "year": "2025",
+      "src": "../../assets/gallery/recent/2024-grandbaby-couch-chat.jpg",
+      "caption": "Couch chat with the littlest voice",
+      "year": "2024",
+      "tape": "rose",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/recent/2024-sleepy-grandbaby-lap.jpg",
+      "caption": "A safe lap for a sleepy grandbaby",
+      "year": "2024",
       "tape": "blue",
-      "tilt": 0
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/recent/2025-snake-show-littles.jpg",
+      "caption": "Snake show with the littles",
+      "year": "2025",
+      "tape": "yellow",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/recent/2026-silly-bed-selfie.jpg",
+      "caption": "Silly bed selfie",
+      "year": "2026",
+      "tape": "rose",
+      "tilt": -2
     }
   ]
 }

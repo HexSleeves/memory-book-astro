@@ -4,25 +4,291 @@
   "order": 2,
   "photos": [
     {
-      "src": "../../assets/gallery/motherhood/01.svg",
-      "caption": "Carrying me before I could carry anything",
-      "year": "1985",
+      "src": "../../assets/gallery/motherhood/2016-graduation-pride.jpg",
+      "caption": "Graduation pride in the yard",
+      "year": "2016",
+      "tape": "rose",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2016-red-gown-hug.jpg",
+      "caption": "Red gown hug",
+      "year": "2016",
+      "tape": "blue",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2016-floral-selfie.jpg",
+      "caption": "Floral selfie, bright as ever",
+      "year": "2016",
       "tape": "yellow",
       "tilt": 2
     },
     {
-      "src": "../../assets/gallery/motherhood/02.svg",
-      "caption": "Reading at the kitchen table after midnight",
-      "year": "1992",
+      "src": "../../assets/gallery/motherhood/2016-dress-up-family.jpg",
+      "caption": "All dressed up together",
+      "year": "2016",
       "tape": "rose",
       "tilt": -1
     },
     {
-      "src": "../../assets/gallery/motherhood/03.svg",
-      "caption": "Walking us to the bus stop one last time",
-      "year": "1998",
+      "src": "../../assets/gallery/motherhood/2016-aquarium-daughter-hug.jpg",
+      "caption": "Aquarium day, shoulder to shoulder",
+      "year": "2016",
       "tape": "blue",
-      "tilt": 0
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2016-love-you-sign.jpg",
+      "caption": "Love you to the moon and back",
+      "year": "2016",
+      "tape": "yellow",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2018-tree-shade.jpg",
+      "caption": "Under the shade together",
+      "year": "2018",
+      "tape": "blue",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2018-porch-hug.jpg",
+      "caption": "Porch hug",
+      "year": "2018",
+      "tape": "yellow",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2018-porch-daughter-hug.jpg",
+      "caption": "Porch hug with the girls close by",
+      "year": "2018",
+      "tape": "rose",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2019-couch-visit.jpg",
+      "caption": "Couch visit",
+      "year": "2019",
+      "tape": "rose",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2019-shopping-trip.jpg",
+      "caption": "Shopping trip sparkle",
+      "year": "2019",
+      "tape": "blue",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2019-couch-daughter-and-dog.jpg",
+      "caption": "Couch visit with a daughter and dog",
+      "year": "2019",
+      "tape": "yellow",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2020-bride-doorway.jpg",
+      "caption": "Wedding day doorway",
+      "year": "2020",
+      "tape": "yellow",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2020-wedding-family.jpg",
+      "caption": "Wedding family portrait",
+      "year": "2020",
+      "tape": "rose",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2020-denim-selfie.jpg",
+      "caption": "Denim jacket selfie",
+      "year": "2020",
+      "tape": "blue",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2020-wedding-morning-hands.jpg",
+      "caption": "Wedding morning hands held tight",
+      "year": "2020",
+      "tape": "yellow",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2020-bridal-room-laughter.jpg",
+      "caption": "Bridal room laughter",
+      "year": "2020",
+      "tape": "rose",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2020-wedding-night-chat.jpg",
+      "caption": "Wedding night check-in",
+      "year": "2020",
+      "tape": "blue",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2021-mother-daughter-smile.jpg",
+      "caption": "Mother-daughter smile",
+      "year": "2021",
+      "tape": "yellow",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2021-campus-celebration.jpg",
+      "caption": "Campus celebration",
+      "year": "2021",
+      "tape": "rose",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2021-awards-table.jpg",
+      "caption": "Proud at the awards table",
+      "year": "2021",
+      "tape": "blue",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2021-care-for-cate.jpg",
+      "caption": "Care for Cate and a grin",
+      "year": "2021",
+      "tape": "yellow",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2021-cake-celebration-selfie.jpg",
+      "caption": "I came, I caked, we laughed",
+      "year": "2021",
+      "tape": "rose",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2021-graduation-day-porch.jpg",
+      "caption": "Graduation day on the porch",
+      "year": "2021",
+      "tape": "blue",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2022-family-bench.jpg",
+      "caption": "Family bench in the woods",
+      "year": "2022",
+      "tape": "rose",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2022-wedding-selfie.jpg",
+      "caption": "Wedding selfie trio",
+      "year": "2022",
+      "tape": "blue",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2022-recognition-day.jpg",
+      "caption": "Recognition day",
+      "year": "2022",
+      "tape": "blue",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2022-certificate-smiles.jpg",
+      "caption": "Certificate smiles",
+      "year": "2022",
+      "tape": "yellow",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2022-rainy-day-baby-snuggle.jpg",
+      "caption": "Rainy day baby snuggle",
+      "year": "2022",
+      "tape": "rose",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2023-gym-selfie.jpg",
+      "caption": "Post-workout selfie",
+      "year": "2023",
+      "tape": "rose",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2023-gym-partners.jpg",
+      "caption": "Gym partners",
+      "year": "2023",
+      "tape": "blue",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2023-gym-headphones-selfie.jpg",
+      "caption": "Gym selfie, headphones and all",
+      "year": "2023",
+      "tape": "yellow",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2024-patio-lunch.jpg",
+      "caption": "Patio lunch date",
+      "year": "2024",
+      "tape": "yellow",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2024-les-mis-night.jpg",
+      "caption": "Theater night",
+      "year": "2024",
+      "tape": "rose",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2024-theater-smiles.jpg",
+      "caption": "Theater smiles",
+      "year": "2024",
+      "tape": "blue",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2024-green-sweater-selfie.jpg",
+      "caption": "Green sweater selfie",
+      "year": "2024",
+      "tape": "yellow",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2024-patio-mother-daughter.jpg",
+      "caption": "Patio mother-daughter pause",
+      "year": "2024",
+      "tape": "rose",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2025-living-room-visit.jpg",
+      "caption": "Living room visit",
+      "year": "2025",
+      "tape": "rose",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2025-hat-and-home.jpg",
+      "caption": "Hat, home, and family",
+      "year": "2025",
+      "tape": "blue",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2026-cheek-to-cheek.jpg",
+      "caption": "Cheek to cheek",
+      "year": "2026",
+      "tape": "yellow",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/motherhood/2026-dressed-up-together.jpg",
+      "caption": "Dressed up together",
+      "year": "2026",
+      "tape": "rose",
+      "tilt": 1
     }
   ]
 }

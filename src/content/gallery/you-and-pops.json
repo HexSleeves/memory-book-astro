@@ -1,0 +1,56 @@
+{
+  "label": "You and Pops",
+  "chapter": "you-and-pops",
+  "order": 3,
+  "photos": [
+    {
+      "src": "../../assets/gallery/you-and-pops/2015-dance-floor-kiss.jpg",
+      "caption": "Still getting swept off her feet",
+      "year": "2015",
+      "tape": "blue",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/you-and-pops/2016-rooster-stop.jpg",
+      "caption": "Roadside stop, arm in arm",
+      "year": "2016",
+      "tape": "yellow",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/you-and-pops/2016-rooster-portrait.jpg",
+      "caption": "Her kind of tourist photo",
+      "year": "2016",
+      "tape": "rose",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/you-and-pops/2016-front-step.jpg",
+      "caption": "Front step visit",
+      "year": "2016",
+      "tape": "blue",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/you-and-pops/2016-music-wall.jpg",
+      "caption": "Rock and roll detour",
+      "year": "2016",
+      "tape": "yellow",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/you-and-pops/2022-family-reunion-frame.jpg",
+      "caption": "Family reunion frame",
+      "year": "2022",
+      "tape": "yellow",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/you-and-pops/2025-hospital-side-by-side.jpg",
+      "caption": "Side by side at the hospital",
+      "year": "2025",
+      "tape": "blue",
+      "tilt": 1
+    }
+  ]
+}

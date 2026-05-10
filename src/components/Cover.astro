@@ -55,13 +55,13 @@ const { title, dedication, photo, photoTilt } = cover.data;
 
   .cover-photo {
     --polaroid-tilt: -3deg;
-    max-width: 18rem;
+    max-width: min(36rem, 88vw);
     margin: 0;
   }
   .cover-photo :global(img) {
     width: 100%;
     height: auto;
-    aspect-ratio: 4/5;
+    aspect-ratio: 3/2;
     object-fit: cover;
   }
 
@@ -127,7 +127,7 @@ const { title, dedication, photo, photoTilt } = cover.data;
 
   @media (min-width: 40rem) {
     .cover-title { font-size: var(--text-4xl); }
-    .cover-photo { max-width: 22rem; }
+    .cover-photo { max-width: min(42rem, 86vw); }
   }
 
   @media (prefers-reduced-motion: reduce) {

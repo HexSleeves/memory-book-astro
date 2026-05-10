@@ -1,0 +1,56 @@
+{
+  "label": "You and the family",
+  "chapter": "you-and-family",
+  "order": 4,
+  "photos": [
+    {
+      "src": "../../assets/gallery/you-and-family/2022-living-room-family.jpg",
+      "caption": "Living room family pile-in",
+      "year": "2022",
+      "tape": "rose",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/you-and-family/2016-dinner-family-dressed-up.jpg",
+      "caption": "Dinner out, everyone dressed up",
+      "year": "2016",
+      "tape": "yellow",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/you-and-family/2018-lsu-tree-family.jpg",
+      "caption": "Tree shade with the LSU grin",
+      "year": "2018",
+      "tape": "blue",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/you-and-family/2020-wedding-bridge-family.jpg",
+      "caption": "Wedding bridge family portrait",
+      "year": "2020",
+      "tape": "rose",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/you-and-family/2021-grandbabies-laughing.jpg",
+      "caption": "Grandbabies making everybody laugh",
+      "year": "2021",
+      "tape": "yellow",
+      "tilt": 1
+    },
+    {
+      "src": "../../assets/gallery/you-and-family/2022-around-grannys-chair.jpg",
+      "caption": "Gathered around Granny's chair",
+      "year": "2022",
+      "tape": "blue",
+      "tilt": -1
+    },
+    {
+      "src": "../../assets/gallery/you-and-family/2025-cowboy-hat-family.jpg",
+      "caption": "Cowboy hats and family smiles",
+      "year": "2025",
+      "tape": "yellow",
+      "tilt": 2
+    }
+  ]
+}

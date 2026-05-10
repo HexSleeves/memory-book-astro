@@ -1,27 +1,41 @@
 {
   "label": "Holidays",
   "chapter": "holidays",
-  "order": 3,
+  "order": 5,
   "photos": [
     {
-      "src": "../../assets/gallery/holidays/01.svg",
-      "caption": "Christmas, before anyone could sit still",
-      "year": "1992",
+      "src": "../../assets/gallery/holidays/2025-second-birthday.jpg",
+      "caption": "Second birthday chaos, exactly right",
+      "year": "2025",
       "tape": "yellow",
-      "tilt": -2
+      "tilt": -1
     },
     {
-      "src": "../../assets/gallery/holidays/02.svg",
-      "caption": "Thanksgiving, the one with the smoke alarm",
-      "year": "1996",
+      "src": "../../assets/gallery/holidays/2024-christmas-couch.jpg",
+      "caption": "Christmas lap full of grandbabies",
+      "year": "2024",
       "tape": "rose",
       "tilt": 1
     },
     {
-      "src": "../../assets/gallery/holidays/03.svg",
-      "caption": "New Year, our hands the same shape",
-      "year": "2003",
+      "src": "../../assets/gallery/holidays/2024-christmas-gift.jpg",
+      "caption": "The Christmas package was almost taller",
+      "year": "2024",
       "tape": "blue",
+      "tilt": -2
+    },
+    {
+      "src": "../../assets/gallery/holidays/2017-christmas-sweaters.jpg",
+      "caption": "Christmas sweaters and matching smiles",
+      "year": "2017",
+      "tape": "yellow",
+      "tilt": 2
+    },
+    {
+      "src": "../../assets/gallery/holidays/2017-birthday-candle-song.jpg",
+      "caption": "Birthday candle song",
+      "year": "2017",
+      "tape": "rose",
       "tilt": -1
     }
   ]
